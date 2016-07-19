@@ -364,7 +364,7 @@
    *   truncated.collapse();
    *
    *   // Update options
-   *   truncated.setOptions({ lines : 3 });
+   *   truncated.config({ lines : 3 });
    */
   function Truncate(element, options) {
     this.element = element;
@@ -380,7 +380,7 @@
       lineHeight: 'auto'
     };
 
-    this.setOptions(options);
+    this.config(options);
 
     this.original = this.cached = element.innerHTML;
 
@@ -398,7 +398,7 @@
      *
      * Returns nothing.
      */
-    setOptions: function (options) {
+    config: function (options) {
       this.options = $.extend({}, this._defaults, options);
 
       if (this.options.lineHeight === 'auto') {

@@ -23,7 +23,7 @@ Truncate.js currently depends on jQuery. There are two ways to use Truncate.js:
     $('#truncate_me').truncate('collapse');
 
     // Update options.
-    $('#truncate_me').truncate('setOptions', { lines : 3 });
+    $('#truncate_me').truncate('config', { lines : 3 });
 
 ### As a vanilla Javascript object
 
@@ -42,7 +42,7 @@ Truncate.js currently depends on jQuery. There are two ways to use Truncate.js:
     truncated.collapse();
 
     // Update options.
-    truncated.setOptions({ lines : 3 });
+    truncated.config({ lines : 3 });
 
     // Check if content is truncated. (not supported as a jQuery plugin)
     var isTruncated = truncated.isTruncated;

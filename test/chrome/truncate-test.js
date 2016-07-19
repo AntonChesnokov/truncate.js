@@ -404,7 +404,7 @@ describe('truncate.js', function () {
       this.run({lines: 1}, false);
       assert.equal(this.$fixture.html(), "Lorem Ipsum is simply dummy text…");
 
-      this.$fixture.truncate('setOptions', {lines: 2});
+      this.$fixture.truncate('config', {lines: 2});
       assert.equal(this.$fixture.html(), "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem");
     });
 
@@ -412,7 +412,7 @@ describe('truncate.js', function () {
       this.run({lines: 1}, false);
       assert.equal(this.$fixture.html(), "Lorem Ipsum is simply dummy text…");
 
-      this.$fixture.truncate('setOptions', {lines: 2});
+      this.$fixture.truncate('config', {lines: 2});
       assert.isTrue(this.$fixture.data('jquery-truncate').isCollapsed);
     });
 
@@ -420,7 +420,7 @@ describe('truncate.js', function () {
       this.run({lines: 1}, false);
       assert.equal(this.$fixture.html(), "Lorem Ipsum is simply dummy text…");
 
-      this.$fixture.truncate('setOptions', {lines: 2});
+      this.$fixture.truncate('config', {lines: 2});
 
       this.$fixture.truncate('expand');
       assert.isFalse(this.$fixture.data('jquery-truncate').isCollapsed);
